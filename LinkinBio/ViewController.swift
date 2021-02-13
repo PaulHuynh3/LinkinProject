@@ -14,15 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        Alamofire.request(.GET, "https://app.latergram.me/api/pub/profiles.json?social_profile=latermedia", parameters: [:])
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.result)     // server data
 
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
+        Alamofire.request("https://app.latergram.me/api/pub/profiles.json?social_profile=latermedia", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": ""]).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.result)     // server data
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
         }
     }
 
@@ -30,8 +28,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 
 }
-
