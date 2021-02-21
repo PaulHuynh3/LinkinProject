@@ -33,7 +33,7 @@ class ProfileRepository: ProfileRepositoryDelegate {
         }
     }
 
-    func getLinkinPosts(with ids: [String], completion: @escaping (([LinkinBioPost?]) -> Void)) {
+    func getLinkinPosts(with ids: [Int], completion: @escaping (([LinkinBioPost?]) -> Void)) {
         var linkinBioPost: [LinkinBioPost] = []
         let dispatchGroup = DispatchGroup()
         for id in ids {
@@ -55,5 +55,6 @@ class ProfileRepository: ProfileRepositoryDelegate {
 }
 
 protocol ProfileRepositoryDelegate {
-//    func getLinkinPosts(recommendedPosts: [String]) -> [Profile]
+    func get(recommendedPosts: [String], completion: @escaping (([Profile?]) -> Void))
+    func getLinkinPosts(with ids: [Int], completion: @escaping (([LinkinBioPost?]) -> Void))
 }

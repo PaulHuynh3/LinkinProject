@@ -37,18 +37,30 @@ class ExploreViewController: UIViewController {
 
 extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.recommendedPosts.count
+        return viewModel.posts.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let exploreCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ExploreCollectionViewCell.self), for: indexPath) as? ExploreCollectionViewCell else { fatalError("Failed to dequereusable cell") }
-        let post = viewModel.recommendedPosts[indexPath.row]
+        let post = viewModel.posts[indexPath.row]
         exploreCell.configure(data: viewModel.buildExploreCellData(post: post))
         return exploreCell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Item selected reconfigure")
+        guard let urlString = viewModel.posts[indexPath.row]?.link_url,
+              let url = URL(string: urlString) else { return }
+
+        if let webViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewController") as? WebViewController {
+            webViewController.configure(urlString: urlString)
+            navigationController?.pushViewController(webViewController, animated: true)
+        } else {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        guard let exploreCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ExploreCollectionViewCell.self), for: indexPath) as? ExploreCollectionViewCell else { fatalError("Failed to dequereusable cell") }
+        let post = viewModel.posts[indexPath.row]
+        exploreCell.configure(data: viewModel.buildExploreCellData(post: post, state: .selected))
+        collectionView.reloadItems(at: [indexPath])
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

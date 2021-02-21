@@ -87,7 +87,7 @@
         <!--Web View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="LinkinBio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="BYZ-38-t0r" customClass="WebViewController" customModule="LinkinBio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -96,19 +96,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-Ca-f0c">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXR-B8-vUr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NTy-Ca-f0c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Gq-Tp-UFV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NTy-Ca-f0c" secondAttribute="bottom" id="P6a-0e-8n5"/>
-                            <constraint firstItem="NTy-Ca-f0c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Pw4-Mw-0Co"/>
-                            <constraint firstAttribute="trailing" secondItem="NTy-Ca-f0c" secondAttribute="trailing" id="jfS-SY-kN3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BXR-B8-vUr" secondAttribute="bottom" id="6mX-U7-JQ9"/>
+                            <constraint firstItem="BXR-B8-vUr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8DI-Xc-E20"/>
+                            <constraint firstItem="BXR-B8-vUr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IDm-FR-ofc"/>
+                            <constraint firstAttribute="trailing" secondItem="BXR-B8-vUr" secondAttribute="trailing" id="iX7-kL-mwH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="BXR-B8-vUr" id="buC-CU-AZG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
