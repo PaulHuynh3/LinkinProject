@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreCollectionViewCell" id="zqt-Do-DAe" customClass="ExploreCollectionViewCell" customModule="LinkinBio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="189" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="189" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wT-FB-pBa">
+                        <rect key="frame" x="0.0" y="44" width="189" height="256"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="02c-T5-Fr3">
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="256"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhK-SG-STO">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="212.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red shirt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-5s-9QB">
+                                        <rect key="frame" x="0.0" y="212.5" width="189" height="43.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UhK-SG-STO" firstAttribute="height" secondItem="02c-T5-Fr3" secondAttribute="height" multiplier="0.83" id="x0e-52-4Q0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="02c-T5-Fr3" firstAttribute="top" secondItem="9wT-FB-pBa" secondAttribute="top" id="8dE-bb-zxD"/>
+                            <constraint firstAttribute="bottom" secondItem="02c-T5-Fr3" secondAttribute="bottom" id="GTE-cJ-4jQ"/>
+                            <constraint firstItem="02c-T5-Fr3" firstAttribute="leading" secondItem="9wT-FB-pBa" secondAttribute="leading" id="lDn-YU-YGM"/>
+                            <constraint firstAttribute="trailing" secondItem="02c-T5-Fr3" secondAttribute="trailing" id="rZX-ac-REX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="o6D-72-gV7"/>
+            <constraints>
+                <constraint firstItem="9wT-FB-pBa" firstAttribute="trailing" secondItem="o6D-72-gV7" secondAttribute="trailing" id="E0k-2m-Oej"/>
+                <constraint firstItem="o6D-72-gV7" firstAttribute="leading" secondItem="9wT-FB-pBa" secondAttribute="leading" id="Xok-bP-B9z"/>
+                <constraint firstItem="9wT-FB-pBa" firstAttribute="top" secondItem="o6D-72-gV7" secondAttribute="top" id="jnc-sF-Y42"/>
+                <constraint firstItem="o6D-72-gV7" firstAttribute="bottom" secondItem="9wT-FB-pBa" secondAttribute="bottom" id="pJa-e4-baM"/>
+            </constraints>
+            <size key="customSize" width="189" height="251"/>
+            <connections>
+                <outlet property="postImageView" destination="UhK-SG-STO" id="R5u-Gp-B6h"/>
+                <outlet property="postTitle" destination="5Jc-5s-9QB" id="xvN-FA-A8W"/>
+            </connections>
+            <point key="canvasLocation" x="-531" y="134"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

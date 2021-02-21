@@ -9,18 +9,27 @@
 /* Begin PBXBuildFile section */
 		288A2BC11CC546AA006D285B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A2BC01CC546AA006D285B /* WebViewController.swift */; };
 		28D33C201CBC682F00799F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D33C1F1CBC682F00799F2C /* AppDelegate.swift */; };
-		28D33C221CBC682F00799F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D33C211CBC682F00799F2C /* ViewController.swift */; };
+		28D33C221CBC682F00799F2C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D33C211CBC682F00799F2C /* ExploreViewController.swift */; };
 		28D33C251CBC682F00799F2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D33C231CBC682F00799F2C /* Main.storyboard */; };
 		28D33C271CBC682F00799F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D33C261CBC682F00799F2C /* Assets.xcassets */; };
 		28D33C2A1CBC682F00799F2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D33C281CBC682F00799F2C /* LaunchScreen.storyboard */; };
 		594221612DE883C048184993 /* Pods_LinkinBio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9C29B0FB62209DDB36F92C /* Pods_LinkinBio.framework */; };
+		EB722E6625E1DE0600A79130 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB722E6425E1DE0600A79130 /* ExploreCollectionViewCell.swift */; };
+		EB722E6725E1DE0600A79130 /* ExploreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB722E6525E1DE0600A79130 /* ExploreCollectionViewCell.xib */; };
+		EB722E6A25E1E0AC00A79130 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB722E6925E1E0AC00A79130 /* ExploreViewModel.swift */; };
+		EB722E6E25E1E2AF00A79130 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB722E6D25E1E2AF00A79130 /* Profile.swift */; };
+		EB722E7D25E2189100A79130 /* PostReuseableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB722E7C25E2189100A79130 /* PostReuseableHeaderView.swift */; };
+		EB722E8425E218FB00A79130 /* PostReuseableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB722E8325E218FB00A79130 /* PostReuseableHeaderView.xib */; };
+		EB722E8725E2200200A79130 /* LinkinBioPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB722E8625E2200200A79130 /* LinkinBioPost.swift */; };
+		EBBD07CD25E1D75400309FE5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD07CC25E1D75400309FE5 /* ProfileService.swift */; };
+		EBBD07D025E1D89800309FE5 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD07CF25E1D89800309FE5 /* ProfileRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		288A2BC01CC546AA006D285B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		28D33C1C1CBC682F00799F2C /* LinkinBio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkinBio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D33C1F1CBC682F00799F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28D33C211CBC682F00799F2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28D33C211CBC682F00799F2C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		28D33C241CBC682F00799F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28D33C261CBC682F00799F2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D33C291CBC682F00799F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +37,15 @@
 		3D2AA1B0D03BC3F09B5606F6 /* Pods-LinkinBio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkinBio.debug.xcconfig"; path = "Target Support Files/Pods-LinkinBio/Pods-LinkinBio.debug.xcconfig"; sourceTree = "<group>"; };
 		DC9C29B0FB62209DDB36F92C /* Pods_LinkinBio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkinBio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AB9D7948BF46F08F631AB8 /* Pods-LinkinBio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkinBio.release.xcconfig"; path = "Target Support Files/Pods-LinkinBio/Pods-LinkinBio.release.xcconfig"; sourceTree = "<group>"; };
+		EB722E6425E1DE0600A79130 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB722E6525E1DE0600A79130 /* ExploreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCollectionViewCell.xib; sourceTree = "<group>"; };
+		EB722E6925E1E0AC00A79130 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		EB722E6D25E1E2AF00A79130 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		EB722E7C25E2189100A79130 /* PostReuseableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReuseableHeaderView.swift; sourceTree = "<group>"; };
+		EB722E8325E218FB00A79130 /* PostReuseableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostReuseableHeaderView.xib; sourceTree = "<group>"; };
+		EB722E8625E2200200A79130 /* LinkinBioPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkinBioPost.swift; sourceTree = "<group>"; };
+		EBBD07CC25E1D75400309FE5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		EBBD07CF25E1D89800309FE5 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +66,6 @@
 				3D2AA1B0D03BC3F09B5606F6 /* Pods-LinkinBio.debug.xcconfig */,
 				E4AB9D7948BF46F08F631AB8 /* Pods-LinkinBio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				28D33C1E1CBC682F00799F2C /* LinkinBio */,
+				EB722E7825E214A400A79130 /* Helper */,
 				28D33C1D1CBC682F00799F2C /* Products */,
 				00B4FB693A4DFACA78633D71 /* Pods */,
 				410251493701B61B5ECFF7F6 /* Frameworks */,
@@ -74,12 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				28D33C1F1CBC682F00799F2C /* AppDelegate.swift */,
-				28D33C211CBC682F00799F2C /* ViewController.swift */,
-				28D33C231CBC682F00799F2C /* Main.storyboard */,
+				EB722E6025E1DD1F00A79130 /* Explore */,
 				28D33C261CBC682F00799F2C /* Assets.xcassets */,
 				28D33C281CBC682F00799F2C /* LaunchScreen.storyboard */,
 				28D33C2B1CBC682F00799F2C /* Info.plist */,
-				288A2BC01CC546AA006D285B /* WebViewController.swift */,
+				EBBD07CB25E1D71700309FE5 /* Service */,
 			);
 			path = LinkinBio;
 			sourceTree = "<group>";
@@ -90,6 +107,63 @@
 				DC9C29B0FB62209DDB36F92C /* Pods_LinkinBio.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB722E6025E1DD1F00A79130 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				28D33C211CBC682F00799F2C /* ExploreViewController.swift */,
+				EB722E6225E1DD4C00A79130 /* ViewModel */,
+				288A2BC01CC546AA006D285B /* WebViewController.swift */,
+				28D33C231CBC682F00799F2C /* Main.storyboard */,
+				EB722E6325E1DD6300A79130 /* Cells */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		EB722E6225E1DD4C00A79130 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB722E6925E1E0AC00A79130 /* ExploreViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB722E6325E1DD6300A79130 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EB722E7C25E2189100A79130 /* PostReuseableHeaderView.swift */,
+				EB722E8325E218FB00A79130 /* PostReuseableHeaderView.xib */,
+				EB722E6425E1DE0600A79130 /* ExploreCollectionViewCell.swift */,
+				EB722E6525E1DE0600A79130 /* ExploreCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EB722E6C25E1E18200A79130 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB722E6D25E1E2AF00A79130 /* Profile.swift */,
+				EB722E8625E2200200A79130 /* LinkinBioPost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB722E7825E214A400A79130 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EBBD07CB25E1D71700309FE5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EBBD07CF25E1D89800309FE5 /* ProfileRepository.swift */,
+				EBBD07CC25E1D75400309FE5 /* ProfileService.swift */,
+				EB722E6C25E1E18200A79130 /* Models */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB722E6725E1DE0600A79130 /* ExploreCollectionViewCell.xib in Resources */,
 				28D33C2A1CBC682F00799F2C /* LaunchScreen.storyboard in Resources */,
+				EB722E8425E218FB00A79130 /* PostReuseableHeaderView.xib in Resources */,
 				28D33C271CBC682F00799F2C /* Assets.xcassets in Resources */,
 				28D33C251CBC682F00799F2C /* Main.storyboard in Resources */,
 			);
@@ -208,9 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D33C221CBC682F00799F2C /* ViewController.swift in Sources */,
+				EB722E8725E2200200A79130 /* LinkinBioPost.swift in Sources */,
+				EB722E6E25E1E2AF00A79130 /* Profile.swift in Sources */,
+				28D33C221CBC682F00799F2C /* ExploreViewController.swift in Sources */,
+				EBBD07CD25E1D75400309FE5 /* ProfileService.swift in Sources */,
 				288A2BC11CC546AA006D285B /* WebViewController.swift in Sources */,
+				EBBD07D025E1D89800309FE5 /* ProfileRepository.swift in Sources */,
+				EB722E7D25E2189100A79130 /* PostReuseableHeaderView.swift in Sources */,
+				EB722E6625E1DE0600A79130 /* ExploreCollectionViewCell.swift in Sources */,
 				28D33C201CBC682F00799F2C /* AppDelegate.swift in Sources */,
+				EB722E6A25E1E0AC00A79130 /* ExploreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
