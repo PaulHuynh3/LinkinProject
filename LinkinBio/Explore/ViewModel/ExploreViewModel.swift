@@ -35,7 +35,6 @@ class ExploreViewModel {
                 self?.posts = linkinPosts.compactMap {$0?.linkinbio_posts}.flatMap { $0 }
                 self?.delegate?.reloadData()
             }
-            self?.delegate?.reloadData()
         }
     }
 }
