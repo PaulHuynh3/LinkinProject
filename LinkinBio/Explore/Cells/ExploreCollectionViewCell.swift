@@ -16,9 +16,9 @@ class ExploreCollectionViewCell: UICollectionViewCell {
     func configure(data: PostData?) {
         downloadImage(from: data?.imageString ?? "")
         postTitle.text = data?.title
-        postTitle.alpha = data?.state == .unselected
-            ? 1
-            : 0.5
+        postTitle.textColor = data?.state == .unselected
+            ? .red
+            : .green
     }
 
     private func downloadImage(from string: String) {
@@ -37,11 +37,10 @@ class ExploreCollectionViewCell: UICollectionViewCell {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 
-    enum State {
+    enum State: String, Codable {
         case selected
         case unselected
     }
-
 }
 
 extension ExploreCollectionViewCell {

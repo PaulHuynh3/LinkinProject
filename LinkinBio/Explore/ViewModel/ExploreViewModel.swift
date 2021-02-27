@@ -18,8 +18,8 @@ class ExploreViewModel {
         retrieveData()
     }
 
-    func buildExploreCellData(post: Post?, state: ExploreCollectionViewCell.State = .unselected) -> ExploreCollectionViewCell.PostData {
-        return ExploreCollectionViewCell.PostData(imageString: post?.image_url, title: post?.link_url, state: state)
+    func buildExploreCellData(post: Post?) -> ExploreCollectionViewCell.PostData {
+        return ExploreCollectionViewCell.PostData(imageString: post?.image_url, title: post?.link_url, state: post?.state ?? .unselected)
     }
 
     private func retrieveData() {

@@ -15,4 +15,5 @@ struct LinkinBioPost: Codable {
 struct Post: Codable {
     let image_url: String
     let link_url: String
+    var state: ExploreCollectionViewCell.State? = .unselected
 }

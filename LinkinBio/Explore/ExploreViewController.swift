@@ -57,9 +57,7 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         } else {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-        guard let exploreCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ExploreCollectionViewCell.self), for: indexPath) as? ExploreCollectionViewCell else { fatalError("Failed to dequereusable cell") }
-        let post = viewModel.posts[indexPath.row]
-        exploreCell.configure(data: viewModel.buildExploreCellData(post: post, state: .selected))
+        viewModel.posts[indexPath.row] = Post(image_url: viewModel.posts[indexPath.row]?.image_url ?? "", link_url: urlString, state: .selected)
         collectionView.reloadItems(at: [indexPath])
     }
 
